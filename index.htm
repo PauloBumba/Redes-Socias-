@@ -3,20 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="staly/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>Trabalha com formularios</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            
+            
+            
+        }
+        #a{
+            border: 1px solid black;
+            border-radius: 20px;    
+        }
+        #botao{
+            padding: 10px;
+            font-weight: bolder;
+           
+           
+            
+          
+        }
+        #bt{
+           text-align: right;
+            padding: 10px;
+           margin-top: -65px;
+          color: black;
+          font-weight: bolder;
+
+
+        }
+        
+        #b{
+            border: 1px solid black;
+            border-radius: 20px;    
+        }
+        label{
+            font-weight: bold;
+        }
+        legend{
+            font-weight: bold;
+        }
+        h1{
+            text-align: center;
+        }
+        fieldset{
+            border: 1px solid black;
+        }
+        
+    </style>
 </head>
 <body>
-    <main>
-        <section id="tela">
-            <iframe src="imagens/tela-home.jpg" frameborder="0"></iframe>
+    <h1>
+        Preenche o seguinte formulario
+    </h1>
+    <form action="cadastro.py" method="post" autocomplete="on" >
+        <fieldset>
+           <legend>Dados pessoais</legend>
+                <p>
+                    <label for="inome">Nome  </label>
+                <input type="text" name="nome" id="inome" required placeholder="Primeiro nome" autocomplete="country-name">
+                </p>
+                <p>
+                    <label for="iSobrenome">Sobrenome</label>
+                    <input type="text" name="Sobrenome"id="iSobrenome" required placeholder="Restantes nome" autocomplete="country-name" >
+                </p>
+                <p>
+                    
+                       
+                        <label for="idate">Data de Nascimento</label>
+                        <input type="date" name="date" id="idate" required>
+                    </
+                </p>
+                <p>
+                    <fieldset id="a">
+                        <legend>Sexo</legend>
+                        <label for="isexo">Masculino</label>
+                        <input type="radio" name="isexo" id="isexo">
+                        <label for="isexo">Femenino</label>
+                        <input type="radio" name="isexo" id="isexo">
+                    </fieldset>
+                </p>
+                <p>
+                    <label for="icor">Cor Favorita</label>
+                   <input type="color" name="icor" id="icor">
+                </p>
+                <p><label for="icoutry">Nacionalidade </label>
+                <input type="text" name="coutry" id="icoutry" required value="Angola"></p>
+                <p><label for="imaeil">Email</label>
+                    <input type="email" name="email" id="imeail" required autocomplete="email">
+                </p>
+                <p>
+                    <label for="pass">PassWord</label>
+                    <input type="password" name="pass" id="pass" required autocomplete="current-password" >
+                </p>
+                <p>
+                    <label for="tel">Telefone</label>
+                    <input type="tel" name="tel" id="tel">
 
-        </section>
-        <section id="telefone">
+                </p>
+                <p>
+                   <fieldset id="b">
+                       <legend>Raça</legend>
+                       
+                           <select name="raca" id="iraca">
+                               <option value="Preta">Preta</option>
+                               <option value="Branca">Branca</option>
+                               <option value="Mistiça">Mistiça</option>
+                           </select>
+                       
+                   </fieldset>
+                <p><label for="iphoto">Foto de Perfil</label>
+                    <input type="file" name="photo" id="iphoto" required >
+                </p>
+           
+        </fieldset>
+        
+        <p id="botao">
+            <input type="submit" value="Enviar" id="botao"> 
+           
+        </p>
+        <p id="bt">
+           
+            <input type="reset" value="Voltar" id="bt">
+        </p>
 
-        </section>
-    </main>
-    
+
+
+
+
+
+
+
+
+
+    </form>
 </body>
 </html>
